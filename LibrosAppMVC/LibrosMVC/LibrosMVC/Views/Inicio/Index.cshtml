@@ -1,0 +1,38 @@
+﻿
+@Model LibrosMVC.Models.Biblioteca;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index - Biblioteca</h2>
+
+<table class="table">
+
+    <tr>
+        <th>
+            Título
+        </th>
+
+        <th>
+            Autor
+        </th>
+
+        <th>
+            Publicación
+        </th>
+    </tr>
+
+        @foreach (LibrosMVC.Models.Biblioteca libro in Model)
+        {
+            <tr>
+
+                <td>@libro.titulo</td>
+                <td>@libro.autor</td>
+                <td>@libro.publicacion</td>
+
+            </tr>
+
+        }
+
+</table>
